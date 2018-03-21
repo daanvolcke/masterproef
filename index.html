@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Evaluatie van de schaalbaarheid van SNMP-gebaseerde netwerkbevraging</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<noscript>
+<link rel="stylesheet" href="css/5grid/core.css" />
+<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style-desktop.css" />
+</noscript>
+<script src="css/5grid/jquery.js"></script>
+<script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+<!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
+</head><body>
+<div id="header-wrapper">
+	<header id="header">
+		<div class="5grid-layout">
+			<div class="row">
+				<div class="12u" id="logo"> <!-- Logo -->
+					<h1><a href="#" class="mobileUI-site-name">Evaluatie van de schaalbaarheid van SNMP-gebaseerde netwerkbevraging</a></h1>
+					<p>Masterproef door Daan Volcke</p>
+				</div>
+			</div>
+		</div>
+		<div id="menu-wrapper">
+			<div class="5grid-layout">
+				<div class="row">
+					<div class="12u" id="menu">
+						<nav class="mobileUI-site-nav">
+							<ul>
+								<li class="current_page_item"><a href="index.html">Home</a></li>
+								<li><a href="uitgebreid-voorstel.html">Uitgebreid voorstel</a></li>
+								<li><a href="poster.html">Poster</a></li>
+								<li><a href="scriptie.html">Scriptie</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+<div id="page-wrapper">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="page" class="5grid-layout">
+				<div id="page-content-wrapper">
+					<div class="row">
+						<div class="12u">
+							<div class="row">
+								<div class="8u">
+									<section id="content">
+										<h2>Situering</h2>
+										<br />
+										<p class="justify">
+											Bestaande (open-source) softwaretools voor het opvragen van netwerkinformatie via SNMP beschikken over te weinig intelligentie om grootschalige netwerken te ondervragen.
+											Hierdoor is het moeilijk om op frequente basis datamining van het netwerk te doen om bijvoorbeeld de netwerkconnectiviteit of netwerkroutering in kaart te brengen.
+											Het efficiënt nagaan van configuratiefouten van grootschalige Ethernet- en IP-netwerken is nochtans een must voor de netwerkbeheerder.
+										</p>
+										<br />
+										<p class="justify">
+											Bij NetworkMining wordt er netwerkbevraging gedaan via SNMP met behulp van een zelf ontwikkelde tool. Momenteel beschikt deze ook nog niet over veel intelligentie.
+											Gegeven een lijst van toestellen en OID's zal ze deze OID's iteratief opvragen aan de machines zonder er verder bij stil te staan wat er juist opgevraagd wordt.
+											Ook voor het bijhouden van historische gegevens kan extra intelligentie goed van pas komen.
+										</p>
+										<br />
+										<p class="justify">
+											Er zijn tal van mogelijke verbeteringen die kunnen verzonnen worden om op een performante manier grootschalige netwerken te ondervragen. Denk aan:
+											<ul class="bulletlist">
+												<li>Multithreading om meerdere netwerknodes of zelfs meerdere OID's van dezelfde netwerknode gelijktijdig op te vragen</li>
+												<li>Gedistribueerde werking waarbij meerdere machines het werk verdelen om het netwerk te ondervragen</li>
+												<li>Het voorzien van extra intelligentie waarbij de software bewust wordt gemaakt hoe dynamisch (of net niet) bepaalde gegevens zijn</li>
+												<li>Het manueel finetunen door de netwerkbeheerder van de frequentie van de opvragingen van individuele gegevens (met oog op het bijhouden van historische data)</li>
+											</ul>
+										</p>
+										
+										<br />
+										<br />
+										
+										<h2>Doelstelling</h2>
+										<br />
+										<p class="justify">
+											De bedoeling van de thesis bestaat erin om de schaalbaarheid te onderzoeken van de SNMP bevragingen met de bestaande software.
+											Hierbij moet er gezocht worden naar mogelijke bottlenecks die zich voordoen. Dit
+											kan gaan om de CPU van de client, bandbreedteproblemen, de databank die de opgevraagde gegevens
+											moet opslaan die niet kan volgen of het netwerkelement zelf die niet snel genoeg is.
+										</p>
+										<br />
+										<p class="justify">
+											Eens de bottlenecks geïdentificeerd zijn moet er gezocht worden naar oplossingen om de bottlenecks
+											te verhelpen. Denk aan aanpassingen aan de software zoals het implementeren van
+											multithreading, gelijktijdig gebruik van meerdere SNMP clients of het opzetten van een
+											databankcluster.
+										</p>
+										<br />
+										<p class="justify">
+											Om te zien hoe effectief de oplossingen zijn zal er ook een testmethode/benchmark opgesteld moeten
+											worden om dit na te meten.
+										</p>
+									</section>
+								</div>
+								
+								<div class="4u">
+									<section id="sidebar">
+										<h2>Intern</h2>
+										<p class="subtitle">UGent</p>
+										<a target="_blank" href="http://www.ugent.be/">
+											<img class="center" src="images/ugent_logo.png" alt="UGent Logo" />
+										</a>
+										<br />
+										<br />
+										<p>Masterproef door: <a href="mailto:daan.volcke@ugent.be">Daan Volcke</a></p>
+										<p>Promotor: <a href="mailto:joris.moreau@ugent.be">Joris Moreau</a></p>
+
+										<div class="divider"></div>
+										
+										<h2>Extern</h2>
+										<p class="subtitle">iMinds</p>
+										<a target="_blank" href="http://www.iminds.be/">
+											<img class="center" src="images/iminds_logo.png" alt="iMinds Logo">
+										</a>
+										<br />
+										<br />
+										<p>Promotor: <a href="mailto:didier.colle@intec.ugent.be">Didier Colle</a></p>
+										<p>Begeleider: <a href="mailto:wouter.tavernier@intec.ugent.be">Wouter Tavernier</a></p>
+										
+										<div class="divider"></div>
+										
+										<p class="subtitle">NetworkMining</p>
+										<a target="_blank" href="http://www.networkmining.com/">
+											<img class="center" src="images/networkmining_logo.png">
+										</a>
+										<br />
+										<br />
+										<p>Promotor: <a href="mailto:nico.wauters@networkmining.com">Nico Wauters</a></p>
+										<p>Begeleider: <a href="mailto:leo.nederlof@networkmining.com">Leo Nederlof</a></p>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="5grid-layout">
+	<section>
+		<p>&copy; Daan Volcke | Design: <a href="http://html5templates.com/">HTML5Templates.com</a></p>
+	</section>
+</div>
+</body>
+</html>
